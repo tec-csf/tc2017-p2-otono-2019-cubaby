@@ -1,1 +1,5 @@
-"# tc2017-p2-otono-2019-cubaby" 
+Problema Práctico II
+===================
+
+Juan Francisco Gortarez & Jorge Damián Palacios
+--------------------------------------------------
