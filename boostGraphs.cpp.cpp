@@ -155,7 +155,7 @@ public:
 		return p;
 	}
 
-	void DFS(Graph p)//complejidad O(n+m)
+	void DFS(Graph p)//complejidad O(n+m) Técnica: Backtracking
 
 	{
 		
@@ -173,7 +173,7 @@ public:
 		std::cout << " \n";
 	}
 
-	void BFS(Graph p, int inicio)//complejidad O(n+m)
+	void BFS(Graph p, int inicio)//complejidad O(n+m) Técnica: No tiene.
 	{
 		
 
@@ -190,7 +190,7 @@ public:
 		std::cout << " \n";
 	}
 
-	void Dijkstra(Graph g) //complejidad O(n log n)
+	void Dijkstra(Graph g) //complejidad O(n log n) Técnica: Algoritmos ávidos. 
 	{
 
 		std::vector<vertex_t> p(num_vertices(g));
@@ -218,7 +218,7 @@ public:
 		}
 	}
 
-	void primMST(Graph p) //complejidad (m log n)
+	void primMST(Graph p) //complejidad (m log n) Técnica: Algoritmos ávidos. 
 	{
 		std::vector<vertex_t> v(num_vertices(p));
 		
@@ -241,13 +241,13 @@ public:
 				std::cout << "parent[" << i << "] = no hay padre" << std::endl;
 	}
 
-	void kruskalMST(Graph p) //complejidad O(n log n)
+	void kruskalMST(Graph p) //complejidad O(n log n) Técnica: Algoritmos ávidos
 	{
 		property_map < Graph, edge_weight_t >::type weight = get(edge_weight, p);
 		std::vector < Edge > spanning_tree;
 
 		auto start = high_resolution_clock::now();
-
+		
 		kruskal_minimum_spanning_tree(p, std::back_inserter(spanning_tree));
 
 		auto stop = high_resolution_clock::now();
@@ -263,7 +263,7 @@ public:
 		}
 	}
 
-	void FloydWarshall(Graph p) //complejidad O(n^3)
+	void FloydWarshall(Graph p) //complejidad O(n^3) Técnica: Programación dinámica
 	{
 		DistanceMatrix distances(num_vertices(p));
 		DistanceMatrixMap dm(distances, p);
